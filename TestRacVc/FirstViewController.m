@@ -23,7 +23,7 @@ typedef CGPoint NSPoint;
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    UIScrollView *scrolView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, 200, 400)];
+    UIScrollView *scrolView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 200, 200, 400)];
     scrolView.contentSize = CGSizeMake(200, 800);
     scrolView.backgroundColor = [UIColor greenColor];
     [self.view addSubview:scrolView];
