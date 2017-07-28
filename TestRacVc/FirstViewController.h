@@ -12,5 +12,7 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *testBtn;
 
+
+@property (weak, nonatomic) IBOutlet UITextField *inputTextField;
 @end
 
