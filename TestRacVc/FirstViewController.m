@@ -8,6 +8,7 @@
 #import "FirstViewController.h"
 #import <ReactiveCocoa.h>
 #import <Foundation/Foundation.h>
+#import <objc/runtime.h>
 
 
 
@@ -97,9 +98,117 @@ typedef CGPoint NSPoint;
     [alertView show];
     
     
+    RACSubject *subject = [RACSubject subject];
+    [subject subscribeNext:^(id x) {
+        NSLog(@"订阅者1%@", x);
+    }];
+    
+    [subject sendNext:@"subject1"];
+    
+    [subject subscribeNext:^(id x) {
+        NSLog(@"订阅者2%@", x);
+    }];
+    
+    [subject sendNext:@"subject2"];
+    
+
+    [self racSubjectTest];
+    
+    [self RACReplaySubject];
+    
+    [self RACSequenceTest];
+    
+    
+    [self coolSignal];
+    
     
     // Do any additional setup after loading the view, typically from a nib.
 }
+
+
+-(void)racSubjectTest
+{
+    RACSubject *subject = [RACSubject subject];
+    [subject subscribeNext:^(id x) {
+        NSLog(@"1 %@",x);
+    }];
+    [subject subscribeNext:^(id x) {
+        NSLog(@"2 %@",x);
+    }];
+    
+    [subject sendNext:@1];
+    [subject subscribeNext:^(id x) {
+        NSLog(@"3 %@",x);
+    }];
+}
+
+
+//http://www.jianshu.com/p/377fd1b4c23f
+-(void)RACReplaySubject
+{
+    RACReplaySubject *replaySubject = [RACReplaySubject subject];
+    [replaySubject subscribeNext:^(id x) {
+        NSLog(@"1 %@,type:%@",x,NSStringFromClass(object_getClass(x)));
+    }];
+    [replaySubject subscribeNext:^(id x) {
+        NSLog(@"1 %@,type:%@",x,NSStringFromClass(object_getClass(x)));
+    }];
+    [replaySubject sendNext:@155];
+    
+    [replaySubject subscribeNext:^(id x) {
+        NSLog(@"3 %@,type:%@",x,NSStringFromClass(object_getClass(x)));
+    }];
+}
+
+
+-(void)RACSequenceTest
+{
+    NSArray *arr = @[@1,@2,@3,@4,@5,@6];
+    [arr.rac_sequence.signal subscribeNext:^(id x) {
+        
+        NSLog(@"x:%@",x);
+    }];
+    
+    NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:@"jtd",@"name",@"man",@"sex",@"jx",@"jg", nil];
+    [dict.rac_sequence.signal subscribeNext:^(id x) {
+        RACTupleUnpack(NSString *key,NSString *value) = x;
+        
+        NSLog(@"key:%@,value:%@",key,value);
+    }];
+    
+    NSDictionary *dict1 = @{@"key1":@"value1",@"key2":@"value2"};
+    NSDictionary *dict2 = @{@"key1":@"value1",@"key2":@"value2"};
+    NSArray *dictArr = @[dict1,dict2];
+    [dictArr.rac_sequence.signal subscribeNext:^(id x) {
+        NSLog(@"x:%@,type:%@",x,NSStringFromClass(object_getClass(x)));
+    }];
+}
+
+
+//http://blog.csdn.net/whuamanlou/article/details/50700072
+-(void)coolSignal
+{
+    RACSignal *signal = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        NSLog(@"send");
+        [subscriber sendNext:@"sender"];
+        [subscriber sendCompleted];
+        return nil;
+    }];
+    NSLog(@"start");
+    [[RACScheduler mainThreadScheduler] afterDelay:0.5 schedule:^{
+        [signal subscribeNext:^(id x) {
+            NSLog(@"Subscriber 1 recveive: %@", x);
+        }];
+    }];
+    [[RACScheduler mainThreadScheduler] afterDelay:1 schedule:^{
+        [signal subscribeNext:^(id x) {
+            NSLog(@"Subscriber 2 recveive: %@", x);
+        }];
+    }];
+}
+
+
+
 
 
 - (void)didReceiveMemoryWarning {
