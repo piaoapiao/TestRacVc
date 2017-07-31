@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MyMode.h"
 
 @interface FirstViewController : UIViewController
 
@@ -14,5 +15,9 @@
 
 
 @property (weak, nonatomic) IBOutlet UITextField *inputTextField;
+
+@property (strong, nonatomic) MyMode *mynode;
+
+@property (strong,nonatomic) NSString *name;
 @end
 

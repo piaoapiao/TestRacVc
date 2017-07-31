@@ -21,8 +21,38 @@ typedef CGPoint NSPoint;
 
 @implementation FirstViewController
 
+-(MyMode *)mynode
+{
+    if(!_mynode)
+    {
+        _mynode = [[MyMode alloc] init];
+    }
+    return _mynode;
+}
+
+-(void)click
+{
+    //NSLog(@"self.name:%@",self.name);
+    
+    NSLog(@"self.inputTextField.text:%@",self.inputTextField.text);
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+   // RACChannelTo(self.inputTextField,text) =
+    
+     // RACChannelTo(self,name) = RACChannelTo(self.mynode,name) ;
+    
+    //RACChannelTo(self.mynode,name)  =  RACChannelTo(self.inputTextField,text) ;
+    
+    RACChannelTo(self.mynode,name)  =  RACChannelTo(self.inputTextField,text) ;
+    
+    
+    
+    //RACChannelTo(self.mynode,name) = RACChannelTo(self.inputTextField,text);
+    
+    //RACChannelTo
     
     [self concat];
     
@@ -41,33 +71,33 @@ typedef CGPoint NSPoint;
     
     [self testHighCommand];
     
-    UIScrollView *scrolView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 200, 200, 400)];
-    scrolView.contentSize = CGSizeMake(200, 800);
-    scrolView.backgroundColor = [UIColor greenColor];
-    [self.view addSubview:scrolView];
-    [RACObserve(scrolView, contentOffset) subscribeNext:^(id x) {
-        
-//        UIScrollView *scrolView = x;
-        
-        //NSPointFromString(@"{10.0, 20.0}");
-        
-        //NSPoint p = NSMakePoint(10, 15);
-        
-        //CGPoint pt =  x;
-        
-        NSValue *value  = x;
-        
-        CGPoint pt = [value CGPointValue];
-        
-        NSLog(@"x:%f y:%f",pt.x,pt.y);
-        
-
-        
-//        point.x=10;
-//        point.y=20;
-//        NSLog(@"%f,%f",point.x,point.y);
-        
-    }];
+//    UIScrollView *scrolView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 200, 200, 400)];
+//    scrolView.contentSize = CGSizeMake(200, 800);
+//    scrolView.backgroundColor = [UIColor greenColor];
+//    [self.view addSubview:scrolView];
+//    [RACObserve(scrolView, contentOffset) subscribeNext:^(id x) {
+//        
+////        UIScrollView *scrolView = x;
+//        
+//        //NSPointFromString(@"{10.0, 20.0}");
+//        
+//        //NSPoint p = NSMakePoint(10, 15);
+//        
+//        //CGPoint pt =  x;
+//        
+//        NSValue *value  = x;
+//        
+//        CGPoint pt = [value CGPointValue];
+//        
+//        NSLog(@"x:%f y:%f",pt.x,pt.y);
+//        
+//
+//        
+////        point.x=10;
+////        point.y=20;
+////        NSLog(@"%f,%f",point.x,point.y);
+//        
+//    }];
     
     [[[NSNotificationCenter defaultCenter] rac_addObserverForName:@"postData" object:nil] subscribeNext:^(NSNotification *notification) {
         NSLog(@"%@", notification.name);
@@ -75,7 +105,9 @@ typedef CGPoint NSPoint;
     }];
     
     
-    [self.testBtn rac_signalForControlEvents:UIControlEventTouchUpInside];
+    //[self.testBtn rac_signalForControlEvents:UIControlEventTouchUpInside];
+    
+    [self.testBtn addTarget:self action:@selector(click) forControlEvents:UIControlEventTouchUpInside];
     
 //    [[self.testBtn rac_signalForControlEvents:UIControlEventTouchUpInside]
 //        subscribeNext:^(id x) {
@@ -89,6 +121,10 @@ typedef CGPoint NSPoint;
     [[self.inputTextField rac_signalForControlEvents:UIControlEventEditingChanged] subscribeNext:^(id x) {
         UITextField *field = x;
         NSLog(@"x:%@",field.text);
+        
+        self.mynode.name = field.text;
+        
+        NSLog(@"self.mode.name:%@",self.mynode.name);
         
 
         
@@ -114,7 +150,7 @@ typedef CGPoint NSPoint;
         NSLog(@"%@",x);
     }];
     
-    [alertView show];
+    //[alertView show];
     
     
     RACSubject *subject = [RACSubject subject];
@@ -153,6 +189,8 @@ typedef CGPoint NSPoint;
     
     
     [self  testCommand];
+    
+  
     
     // Do any additional setup after loading the view, typically from a nib.
 }
@@ -394,6 +432,8 @@ typedef CGPoint NSPoint;
     }];
     // 2.执行命令
     [command execute:@3];
+    
+    [command execute:@4];
 }
 
 

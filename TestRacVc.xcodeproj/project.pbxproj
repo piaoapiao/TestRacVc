@@ -16,6 +16,7 @@
 		460402121F13855700780C8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 460402101F13855700780C8B /* LaunchScreen.storyboard */; };
 		4604021D1F13855700780C8B /* TestRacVcTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4604021C1F13855700780C8B /* TestRacVcTests.m */; };
 		460402281F13855700780C8B /* TestRacVcUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 460402271F13855700780C8B /* TestRacVcUITests.m */; };
+		463EAC101F2F0BF1002E1B01 /* MyMode.m in Sources */ = {isa = PBXBuildFile; fileRef = 463EAC0F1F2F0BF1002E1B01 /* MyMode.m */; };
 		AFE2C1823BCECFEF5813073E /* libPods-TestRacVc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C90ACEE79FD43236DA1C4C59 /* libPods-TestRacVc.a */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +56,8 @@
 		460402231F13855700780C8B /* TestRacVcUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestRacVcUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		460402271F13855700780C8B /* TestRacVcUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestRacVcUITests.m; sourceTree = "<group>"; };
 		460402291F13855700780C8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		463EAC0E1F2F0BF1002E1B01 /* MyMode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyMode.h; sourceTree = "<group>"; };
+		463EAC0F1F2F0BF1002E1B01 /* MyMode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyMode.m; sourceTree = "<group>"; };
 		C294D09CB223DB94E11353C9 /* Pods-TestRacVc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestRacVc.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestRacVc/Pods-TestRacVc.release.xcconfig"; sourceTree = "<group>"; };
 		C90ACEE79FD43236DA1C4C59 /* libPods-TestRacVc.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestRacVc.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4B0B1F9A4C239BD022CC6BE /* Pods-TestRacVc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestRacVc.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestRacVc/Pods-TestRacVc.debug.xcconfig"; sourceTree = "<group>"; };
@@ -130,6 +133,8 @@
 				460402101F13855700780C8B /* LaunchScreen.storyboard */,
 				460402131F13855700780C8B /* Info.plist */,
 				460401FF1F13855700780C8B /* Supporting Files */,
+				463EAC0E1F2F0BF1002E1B01 /* MyMode.h */,
+				463EAC0F1F2F0BF1002E1B01 /* MyMode.m */,
 			);
 			path = TestRacVc;
 			sourceTree = "<group>";
@@ -360,6 +365,7 @@
 				460402041F13855700780C8B /* AppDelegate.m in Sources */,
 				460402071F13855700780C8B /* FirstViewController.m in Sources */,
 				460402011F13855700780C8B /* main.m in Sources */,
+				463EAC101F2F0BF1002E1B01 /* MyMode.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
