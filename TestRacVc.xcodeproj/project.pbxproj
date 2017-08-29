@@ -17,6 +17,7 @@
 		4604021D1F13855700780C8B /* TestRacVcTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4604021C1F13855700780C8B /* TestRacVcTests.m */; };
 		460402281F13855700780C8B /* TestRacVcUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 460402271F13855700780C8B /* TestRacVcUITests.m */; };
 		463EAC101F2F0BF1002E1B01 /* MyMode.m in Sources */ = {isa = PBXBuildFile; fileRef = 463EAC0F1F2F0BF1002E1B01 /* MyMode.m */; };
+		46897D0A1F556AA900421884 /* main.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = 46897D091F556AA900421884 /* main.jsbundle */; };
 		AFE2C1823BCECFEF5813073E /* libPods-TestRacVc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C90ACEE79FD43236DA1C4C59 /* libPods-TestRacVc.a */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +59,7 @@
 		460402291F13855700780C8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		463EAC0E1F2F0BF1002E1B01 /* MyMode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyMode.h; sourceTree = "<group>"; };
 		463EAC0F1F2F0BF1002E1B01 /* MyMode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyMode.m; sourceTree = "<group>"; };
+		46897D091F556AA900421884 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
 		C294D09CB223DB94E11353C9 /* Pods-TestRacVc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestRacVc.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestRacVc/Pods-TestRacVc.release.xcconfig"; sourceTree = "<group>"; };
 		C90ACEE79FD43236DA1C4C59 /* libPods-TestRacVc.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestRacVc.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4B0B1F9A4C239BD022CC6BE /* Pods-TestRacVc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestRacVc.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestRacVc/Pods-TestRacVc.debug.xcconfig"; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 		460401FE1F13855700780C8B /* TestRacVc */ = {
 			isa = PBXGroup;
 			children = (
+				46897D091F556AA900421884 /* main.jsbundle */,
 				460402021F13855700780C8B /* AppDelegate.h */,
 				460402031F13855700780C8B /* AppDelegate.m */,
 				460402051F13855700780C8B /* FirstViewController.h */,
@@ -289,6 +292,7 @@
 				460402121F13855700780C8B /* LaunchScreen.storyboard in Resources */,
 				4604020F1F13855700780C8B /* Assets.xcassets in Resources */,
 				4604020D1F13855700780C8B /* Main.storyboard in Resources */,
+				46897D0A1F556AA900421884 /* main.jsbundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

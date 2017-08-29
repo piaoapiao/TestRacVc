@@ -8,6 +8,7 @@
 
 #import "SecondViewController.h"
 #import <React/RCTRootView.h>
+#import <RCTBundleURLProvider.h>
 
 @interface SecondViewController ()
 
@@ -18,6 +19,20 @@
 -(void)click
 {
     NSLog(@"HH");
+    NSLog(@"High Score Button Pressed");
+   //NSURL *jsCodeLocation = [NSURL URLWithString:@"http://localhost:8081/index.ios.bundle?platform=ios"];
+    
+    
+     NSURL *jsCodeLocation  = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"main" fallbackResource:nil];
+    
+    RCTRootView *rootView =
+    [[RCTRootView alloc] initWithBundleURL: jsCodeLocation
+                                moduleName: @"MyRnDemo"
+                         initialProperties:nil
+                             launchOptions: nil];
+    UIViewController *vc = [[UIViewController alloc] init];
+    vc.view = rootView;
+    [self presentViewController:vc animated:YES completion:nil];
 }
 
 - (void)viewDidLoad {
