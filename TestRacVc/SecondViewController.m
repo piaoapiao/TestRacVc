@@ -7,6 +7,7 @@
 //
 
 #import "SecondViewController.h"
+#import <React/RCTRootView.h>
 
 @interface SecondViewController ()
 
@@ -14,8 +15,20 @@
 
 @implementation SecondViewController
 
+-(void)click
+{
+    NSLog(@"HH");
+}
+
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
+    
+    UIButton *click = [[UIButton alloc] initWithFrame:CGRectMake(100, 100, 100, 30)];
+    click.backgroundColor = [UIColor redColor];
+    [click addTarget:self action:@selector(click) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:click];
+    
     // Do any additional setup after loading the view, typically from a nib.
 }
 
