@@ -35,9 +35,19 @@
     
     //[self.instance renderWithURL:self.url options:@{@"bundleUrl":[self.url absoluteString]} data:nil];
     
-   // self.url = [NSURL URLWithString:[[NSBundle mainBundle] pathForResource:@"app" ofType:@"js"]];
+   // self.url = [NSURL URLWithString:[[NSBundle mainBundle] pathForResource:@"app" ofType:@"js"]];  //不支持本地加载
     
-    self.url = [NSURL URLWithString:@"http://oneccc.bid/app.js"];
+    //self.url = [NSURL URLWithString:@"http://oneccc.bid/app.js"];
+    
+    NSLog(@"url :%@",[[NSBundle mainBundle] pathForResource:@"app" ofType:@"js"]);
+    
+    
+    NSString *path=[NSString stringWithFormat:@"file://%@/%@",[NSBundle mainBundle].bundlePath,@"app.js"];
+    
+    NSLog(@"-----path:%@",path);
+    
+    self.url = [NSURL URLWithString:path];
+    
     
   //  [self.instance renderWithURL:self.url options:nil data:nil];
     
