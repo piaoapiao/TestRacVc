@@ -12,6 +12,13 @@
 #import <CodePush.h>
 #import "AppDelegate.h"
 
+#import <WeexSDK/WXSDKEngine.h>
+#import <WeexSDK/WXLog.h>
+#import <WeexSDK/WXDebugTool.h>
+#import <WeexSDK/WXAppConfiguration.h>
+
+#import "WeexControllerViewController.h"
+
 @interface SecondViewController ()
 
 @end
@@ -49,6 +56,13 @@
     [self presentViewController:vc animated:YES completion:nil];
 }
 
+-(void)click2
+{
+    WeexControllerViewController *weexCtrl = [WeexControllerViewController new];
+    
+    [self presentViewController:weexCtrl animated:YES completion:nil];
+}
+
 - (void)viewDidLoad {
     
     [super viewDidLoad];
@@ -57,6 +71,12 @@
     click.backgroundColor = [UIColor redColor];
     [click addTarget:self action:@selector(click) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:click];
+    
+    
+    UIButton *click2 = [[UIButton alloc] initWithFrame:CGRectMake(100, 300, 100, 30)];
+    click2.backgroundColor = [UIColor redColor];
+    [click2 addTarget:self action:@selector(click2) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:click2];
     
     // Do any additional setup after loading the view, typically from a nib.
 }

@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "BFB4D9FB47D4328E9C7CCDEF275AA761900D8C50",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "BFB4D9FB47D4328E9C7CCDEF275AA761900D8C50" : 9223372036854775807,
+    "B69E8DDD398BF0860B647E2B48C82291C09E6EC5" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "48E5A4CF-6E2B-4DE2-B00F-20C20DA55DF6",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "BFB4D9FB47D4328E9C7CCDEF275AA761900D8C50" : "TestRacVc\/",
+    "B69E8DDD398BF0860B647E2B48C82291C09E6EC5" : "weex\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "TestRacVc",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "TestRacVc.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/alibaba\/weex.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "B69E8DDD398BF0860B647E2B48C82291C09E6EC5"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/piaoapiao\/TestRacVc.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "BFB4D9FB47D4328E9C7CCDEF275AA761900D8C50"
+    }
+  ]
+}

@@ -22,4 +22,7 @@ target 'TestRacVc' do
   ]
   pod "Yoga", :path => "./node_modules/react-native/ReactCommon/yoga"
   pod 'CodePush', :path => './node_modules/react-native-code-push'
+  
+  
+  pod 'WeexSDK'
 end

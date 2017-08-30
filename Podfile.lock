@@ -54,6 +54,9 @@ PODS:
   - ReactiveCocoa/no-arc (2.5)
   - ReactiveCocoa/UI (2.5):
     - ReactiveCocoa/Core
+  - SocketRocket (0.5.1)
+  - WeexSDK (0.15.1):
+    - SocketRocket
   - Yoga (0.46.4.React)
 
 DEPENDENCIES:
@@ -75,6 +78,7 @@ DEPENDENCIES:
   - React/RCTVibration (from `./node_modules/react-native/`)
   - React/RCTWebSocket (from `./node_modules/react-native/`)
   - ReactiveCocoa (= 2.5)
+  - WeexSDK
   - Yoga (from `./node_modules/react-native/ReactCommon/yoga`)
 
 EXTERNAL SOURCES:
@@ -89,8 +93,10 @@ SPEC CHECKSUMS:
   CodePush: 1beede48311c3fa5627587ff982efb81985e5047
   React: 596d8774642d10fea20b1f24cc591fcf633f73ad
   ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
+  SocketRocket: d57c7159b83c3c6655745cd15302aa24b6bae531
+  WeexSDK: 5282685df6d7279213a51a3142b915759f6e3413
   Yoga: 98e24da91afe33bb43fedaf27dafede269c04fe8
 
-PODFILE CHECKSUM: 71a7d5da8cf201044993b27d70bfcd69e9923c7e
+PODFILE CHECKSUM: a8d358af131017c1238a06afa7f7d259ff6f1145
 
 COCOAPODS: 1.2.1

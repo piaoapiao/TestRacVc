@@ -9,6 +9,12 @@
 #import "AppDelegate.h"
 #import <CodePush/CodePush.h>
 
+#import <WeexSDK/WXSDKEngine.h>
+#import <WeexSDK/WXLog.h>
+#import <WeexSDK/WXDebugTool.h>
+#import <WeexSDK/WXAppConfiguration.h>
+#import <WeexSDK/WXSDKInstance.h>
+
 
 @interface AppDelegate ()
 
@@ -16,8 +22,27 @@
 
 @implementation AppDelegate
 
+-(void)initWeex
+{
+    //business configuration
+    [WXAppConfiguration setAppGroup:@"AliApp"];
+    [WXAppConfiguration setAppName:@"WeexDemo"];
+    [WXAppConfiguration setAppVersion:@"1.0.0"];
+    //init sdk environment
+    [WXSDKEngine initSDKEnvironment];
+    //register custom module and component，optional
+//    [WXSDKEngine registerComponent:@"MyView" withClass:[MyViewComponent class]];
+//    [WXSDKEngine registerModule:@"event" withClass:[WXEventModule class]];
+//    //register the implementation of protocol, optional
+//    [WXSDKEngine registerHandler:[WXNavigationDefaultImpl new] withProtocol:@protocol(WXNavigationProtocol)];
+    //set the log level
+    [WXLog setLogLevel: WXLogLevelAll];
+
+}
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [self initWeex];
     // Override point for customization after application launch.
     
     // NSURL *jsCodeLocation = [CodePush bundleURL];
