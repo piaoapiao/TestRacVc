@@ -17,6 +17,7 @@
   "homepage": "https://github.com/piaoapiao/TestRacVc#readme",
   "dependencies": {
     "react": "^15.6.1",
-    "react-native": "^0.46.1"
+    "react-native": "^0.46.1",
+    "react-native-code-push": "^5.0.0-beta"
   }
 }

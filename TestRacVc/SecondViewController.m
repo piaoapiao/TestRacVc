@@ -9,6 +9,8 @@
 #import "SecondViewController.h"
 #import <React/RCTRootView.h>
 #import <RCTBundleURLProvider.h>
+#import <CodePush.h>
+#import "AppDelegate.h"
 
 @interface SecondViewController ()
 
@@ -21,10 +23,21 @@
     NSLog(@"HH");
     NSLog(@"High Score Button Pressed");
     
-   NSURL *jsCodeLocation = [NSURL URLWithString:@"http://localhost:8081/index.ios.bundle?platform=ios"];
+   //NSURL *jsCodeLocation = [NSURL URLWithString:@"http://localhost:8081/index.ios.bundle?platform=ios"];
+    
+    
+    //NSURL *jsCodeLocation = [NSURL URLWithString:@"http://192.168.47.178:8081/index.ios.bundle?platform=ios"];
     
     
     //NSURL *jsCodeLocation  = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"main" fallbackResource:nil];
+    
+    AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    
+    NSLog(@"app:%@",app);
+    
+    NSURL *jsCodeLocation = app.jsCodeLocation;
+    
+    //NSURL *jsCodeLocation  = [CodePush bundleURL];
     
     RCTRootView *rootView =
     [[RCTRootView alloc] initWithBundleURL: jsCodeLocation

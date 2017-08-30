@@ -21,4 +21,5 @@ target 'TestRacVc' do
     # 在这里继续添加你所需要的模块
   ]
   pod "Yoga", :path => "./node_modules/react-native/ReactCommon/yoga"
+  pod 'CodePush', :path => './node_modules/react-native-code-push'
 end

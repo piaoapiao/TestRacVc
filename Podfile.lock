@@ -1,4 +1,14 @@
 PODS:
+  - CodePush (5.0.0):
+    - CodePush/Core (= 5.0.0)
+    - CodePush/SSZipArchive (= 5.0.0)
+    - React
+  - CodePush/Core (5.0.0):
+    - React
+  - CodePush/SSZipArchive (5.0.0):
+    - React
+  - React (0.46.4):
+    - React/Core (= 0.46.4)
   - React/ART (0.46.4):
     - React/Core
   - React/BatchedBridge (0.46.4):
@@ -47,6 +57,7 @@ PODS:
   - Yoga (0.46.4.React)
 
 DEPENDENCIES:
+  - CodePush (from `./node_modules/react-native-code-push`)
   - React/ART (from `./node_modules/react-native/`)
   - React/BatchedBridge (from `./node_modules/react-native/`)
   - React/Core (from `./node_modules/react-native/`)
@@ -67,16 +78,19 @@ DEPENDENCIES:
   - Yoga (from `./node_modules/react-native/ReactCommon/yoga`)
 
 EXTERNAL SOURCES:
+  CodePush:
+    :path: "./node_modules/react-native-code-push"
   React:
     :path: "./node_modules/react-native/"
   Yoga:
     :path: "./node_modules/react-native/ReactCommon/yoga"
 
 SPEC CHECKSUMS:
+  CodePush: 1beede48311c3fa5627587ff982efb81985e5047
   React: 596d8774642d10fea20b1f24cc591fcf633f73ad
   ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
   Yoga: 98e24da91afe33bb43fedaf27dafede269c04fe8
 
-PODFILE CHECKSUM: de5e6841afa5c04a3eb3ca71afa3ee8dfca94fd0
+PODFILE CHECKSUM: 71a7d5da8cf201044993b27d70bfcd69e9923c7e
 
 COCOAPODS: 1.2.1

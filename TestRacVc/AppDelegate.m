@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import <CodePush/CodePush.h>
+
 
 @interface AppDelegate ()
 
@@ -17,6 +19,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    // NSURL *jsCodeLocation = [CodePush bundleURL];
+    self.jsCodeLocation = [CodePush bundleURL];
+    //NSLog(@"here:%@",self.jsCodeLocation.absoluteString);
     return YES;
 }
 
