@@ -17,10 +17,11 @@
 		4604021D1F13855700780C8B /* TestRacVcTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4604021C1F13855700780C8B /* TestRacVcTests.m */; };
 		460402281F13855700780C8B /* TestRacVcUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 460402271F13855700780C8B /* TestRacVcUITests.m */; };
 		463EAC101F2F0BF1002E1B01 /* MyMode.m in Sources */ = {isa = PBXBuildFile; fileRef = 463EAC0F1F2F0BF1002E1B01 /* MyMode.m */; };
-		46897D1D1F55C5F300421884 /* main.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = 46897D1C1F55C5F300421884 /* main.jsbundle */; };
 		46897D251F569B2200421884 /* main.js in Resources */ = {isa = PBXBuildFile; fileRef = 46897D241F569B2200421884 /* main.js */; };
 		46897D2A1F56A63400421884 /* WeexControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46897D291F56A63400421884 /* WeexControllerViewController.m */; };
 		46897D2C1F56A72600421884 /* app.js in Resources */ = {isa = PBXBuildFile; fileRef = 46897D2B1F56A72600421884 /* app.js */; };
+		46897D2F1F56BC6000421884 /* RnNativeModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 46897D2E1F56BC6000421884 /* RnNativeModule.m */; };
+		46897D351F56C38200421884 /* main.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = 46897D341F56C38200421884 /* main.jsbundle */; };
 		AFE2C1823BCECFEF5813073E /* libPods-TestRacVc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C90ACEE79FD43236DA1C4C59 /* libPods-TestRacVc.a */; };
 /* End PBXBuildFile section */
 
@@ -62,11 +63,13 @@
 		460402291F13855700780C8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		463EAC0E1F2F0BF1002E1B01 /* MyMode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyMode.h; sourceTree = "<group>"; };
 		463EAC0F1F2F0BF1002E1B01 /* MyMode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyMode.m; sourceTree = "<group>"; };
-		46897D1C1F55C5F300421884 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
 		46897D241F569B2200421884 /* main.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = main.js; path = ../weex/ios/sdk/Products/WeexSDK.framework/main.js; sourceTree = "<group>"; };
 		46897D281F56A63400421884 /* WeexControllerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeexControllerViewController.h; sourceTree = "<group>"; };
 		46897D291F56A63400421884 /* WeexControllerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeexControllerViewController.m; sourceTree = "<group>"; };
 		46897D2B1F56A72600421884 /* app.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = app.js; sourceTree = "<group>"; };
+		46897D2D1F56BC6000421884 /* RnNativeModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RnNativeModule.h; sourceTree = "<group>"; };
+		46897D2E1F56BC6000421884 /* RnNativeModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RnNativeModule.m; sourceTree = "<group>"; };
+		46897D341F56C38200421884 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
 		BC1E548D565E98EE4B0F137D /* Pods-TestRacVc.staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestRacVc.staging.xcconfig"; path = "Pods/Target Support Files/Pods-TestRacVc/Pods-TestRacVc.staging.xcconfig"; sourceTree = "<group>"; };
 		C294D09CB223DB94E11353C9 /* Pods-TestRacVc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestRacVc.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestRacVc/Pods-TestRacVc.release.xcconfig"; sourceTree = "<group>"; };
 		C90ACEE79FD43236DA1C4C59 /* libPods-TestRacVc.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestRacVc.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -134,7 +137,7 @@
 		460401FE1F13855700780C8B /* TestRacVc */ = {
 			isa = PBXGroup;
 			children = (
-				46897D1C1F55C5F300421884 /* main.jsbundle */,
+				46897D341F56C38200421884 /* main.jsbundle */,
 				460402021F13855700780C8B /* AppDelegate.h */,
 				460402031F13855700780C8B /* AppDelegate.m */,
 				460402051F13855700780C8B /* FirstViewController.h */,
@@ -150,6 +153,8 @@
 				460401FF1F13855700780C8B /* Supporting Files */,
 				463EAC0E1F2F0BF1002E1B01 /* MyMode.h */,
 				463EAC0F1F2F0BF1002E1B01 /* MyMode.m */,
+				46897D2D1F56BC6000421884 /* RnNativeModule.h */,
+				46897D2E1F56BC6000421884 /* RnNativeModule.m */,
 			);
 			path = TestRacVc;
 			sourceTree = "<group>";
@@ -305,9 +310,9 @@
 				46897D251F569B2200421884 /* main.js in Resources */,
 				460402121F13855700780C8B /* LaunchScreen.storyboard in Resources */,
 				46897D2C1F56A72600421884 /* app.js in Resources */,
+				46897D351F56C38200421884 /* main.jsbundle in Resources */,
 				4604020F1F13855700780C8B /* Assets.xcassets in Resources */,
 				4604020D1F13855700780C8B /* Main.storyboard in Resources */,
-				46897D1D1F55C5F300421884 /* main.jsbundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,6 +388,7 @@
 				4604020A1F13855700780C8B /* SecondViewController.m in Sources */,
 				460402041F13855700780C8B /* AppDelegate.m in Sources */,
 				460402071F13855700780C8B /* FirstViewController.m in Sources */,
+				46897D2F1F56BC6000421884 /* RnNativeModule.m in Sources */,
 				460402011F13855700780C8B /* main.m in Sources */,
 				463EAC101F2F0BF1002E1B01 /* MyMode.m in Sources */,
 				46897D2A1F56A63400421884 /* WeexControllerViewController.m in Sources */,

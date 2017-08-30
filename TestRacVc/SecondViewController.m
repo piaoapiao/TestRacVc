@@ -75,6 +75,7 @@
     
     UIButton *click2 = [[UIButton alloc] initWithFrame:CGRectMake(100, 300, 100, 30)];
     click2.backgroundColor = [UIColor redColor];
+    [click2 setTitle:@"weex 页面" forState:UIControlStateNormal];
     [click2 addTarget:self action:@selector(click2) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:click2];
     
