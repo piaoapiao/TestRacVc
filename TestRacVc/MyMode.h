@@ -6,10 +6,13 @@
 //  Copyright © 2017年 maizi. All rights reserved.
 //
 
+// testt
 #import <Foundation/Foundation.h>
 
 @interface MyMode : NSObject
 
 @property (nonatomic,strong) NSString *name;
+
+
 
 @end
